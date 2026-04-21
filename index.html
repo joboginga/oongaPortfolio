@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahati Oonga | Transportation & Land Use Planner</title>
+    <meta name="description" content="Portfolio of Bahati Oonga — Transportation & Land Use Planner specializing in sustainable urban mobility, GIS, and transit-oriented development. Based in Louisville, KY.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Security Hardening -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://wa.me; frame-src 'none'; object-src 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+</head>
+<body>
+
+    <!-- Mobile Top Bar -->
+    <div class="mobile-top-bar">
+        <div class="info-bar-btn" id="sidebar-toggle">
+            <i class="fas fa-sliders-h"></i>
+        </div>
+        <span class="mobile-logo">Bahati <span>Oonga</span></span>
+        <div class="menu-btn" id="nav-toggle">
+            <i class="fas fa-grip-vertical"></i>
+        </div>
+    </div>
+
+    <!-- App Overlay -->
+    <div class="app-overlay" id="app-overlay"></div>
+
+    <div class="app-wrapper">
+
+        <!-- ======================== SIDEBAR ======================== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-frame">
+                    <img src="profile.png" alt="Bahati Oonga" class="profile-pic" style="object-position: center 15%;">
+                    <span class="status-dot"></span>
+                </div>
+                <h2 class="sidebar-name">Bahati Oonga</h2>
+                <div class="sidebar-roles">
+                    <p>Transportation &amp; Land Use Planner</p>
+                    <p>Louisville, KY</p>
+                </div>
+            </div>
+
+            <div class="sidebar-scrollable">
+                <!-- Info -->
+                <span class="sidebar-subtitle">Profile</span>
+                <div class="info-list">
+                    <div class="info-item"><span>Residence</span><span>USA</span></div>
+                    <div class="info-item"><span>City</span><span>Louisville, KY</span></div>
+                    <div class="info-item"><span>Email</span><span>dilanbrian@gmail.com</span></div>
+                    <div class="info-item"><span>Phone</span><span>+1 502 779 1529</span></div>
+                </div>
+
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="https://wa.me/15027791529" target="_blank" rel="noopener noreferrer" class="cv-link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
+                <div class="footer-socials">
+                    <a href="mailto:dilanbrian@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+15027791529" title="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://wa.me/15027791529" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ======================== MAIN CONTENT ======================== -->
+        <main class="main-content" id="main-content">
+
+
+            <!-- ——— HERO SECTION ——— -->
+            <section class="hero-section" id="home">
+                <div class="hero-inner">
+                    <!-- Text Block -->
+                    <div class="hero-text-block">
+                        <div class="hero-eyebrow reveal">Transportation & Land Use Planner</div>
+                        <h1 class="hero-name reveal reveal-delay-1">
+                            Planning Cities<br>
+                            People <em>Love</em>
+                        </h1>
+                        <p class="hero-role reveal reveal-delay-2">
+                            Designing equitable, sustainable mobility systems for<br>
+                            <span class="typing-text">Urban Communities.</span>
+                        </p>
+                        <div class="hero-cta reveal reveal-delay-3">
+                            <a href="#contact" class="btn-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                Book a Call
+                            </a>
+                            <a href="#about" class="btn-outline">
+                                <i class="fas fa-arrow-down"></i>
+                                Explore Work
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="hero-image-card reveal reveal-delay-2">
+                        <img src="profile.png" alt="Bahati Oonga — Transportation Planner">
+                        <div class="hero-badge">
+                            <div class="hero-badge-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="hero-badge-text">
+                                <strong>Louisville, Kentucky</strong>
+                                <span>Currently Based Here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marquee Strip -->
+                <div class="marquee-strip">
+                    <div class="marquee-track">
+                        <div class="marquee-item">Transportation Planning<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">GIS & Urban Analytics<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Sustainable Mobility<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Transit-Oriented Development<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Land Use Integration<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Multimodal Safety<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Inclusive Communities<span class="marquee-separator"></span></div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="marquee-item">Transportation Planning<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">GIS & Urban Analytics<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Sustainable Mobility<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Transit-Oriented Development<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Land Use Integration<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Multimodal Safety<span class="marquee-separator"></span></div>
+                        <div class="marquee-item">Inclusive Communities<span class="marquee-separator"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ——— STATS ROW ——— -->
+            <div class="stats-row">
+                <div class="stat-cell reveal">
+                    <span class="stat-num">4+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-cell reveal reveal-delay-1">
+                    <span class="stat-num">15+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-cell reveal reveal-delay-2">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Awards Won</span>
+                </div>
+                <div class="stat-cell reveal reveal-delay-3">
+                    <span class="stat-num">20+</span>
+                    <span class="stat-label">Planning Initiatives</span>
+                </div>
+            </div>
+
+            <section class="content-section about-prof-section" id="about">
+
+                <!-- ── TOP: Header + Bio + Languages ── -->
+                <div class="ap-top">
+                    <div class="section-eyebrow reveal">Who I Am &amp; What I Bring</div>
+                    <div class="ap-top-grid">
+                        <div class="ap-bio reveal reveal-delay-1">
+                            <h2 class="section-title">Professional<br>Profile</h2>
+                            <p class="about-lead">
+                                Transportation Planning professional with a strong foundation in transportation policy, urban mobility systems, and sustainable planning practices.
+                            </p>
+                            <p class="about-body">
+                                Experienced in analyzing transportation systems through environmental, equity, safety, and economic lenses. Committed to advancing sustainable, equitable, and community-centered mobility solutions through data-driven and participatory planning approaches.
+                            </p>
+                        </div>
+                        <div class="ap-right reveal reveal-delay-2">
+                            <blockquote class="pull-quote">
+                                “Great planning starts with listening to people, understanding data, and building systems that serve <em>everyone</em>.”
+                            </blockquote>
+                            <div class="ap-languages">
+                                <span class="ap-lang-label">Languages</span>
+                                <div class="ap-lang-row">
+                                    <div class="circle-item">
+                                        <div class="progress-circle" data-percent="100">
+                                            <svg viewBox="0 0 52 52">
+                                                <circle cx="26" cy="26" r="22"></circle>
+                                                <circle class="fill-circle" cx="26" cy="26" r="22"></circle>
+                                            </svg>
+                                            <span class="percent">100%</span>
+                                        </div>
+                                        <p>English</p>
+                                    </div>
+                                    <div class="circle-item">
+                                        <div class="progress-circle" data-percent="85">
+                                            <svg viewBox="0 0 52 52">
+                                                <circle cx="26" cy="26" r="22"></circle>
+                                                <circle class="fill-circle" cx="26" cy="26" r="22"></circle>
+                                            </svg>
+                                            <span class="percent">85%</span>
+                                        </div>
+                                        <p>Swahili</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── BOTTOM: 2-zone panel ── -->
+                <div class="ap-panel">
+
+                    <!-- Zone 1: Focus Areas -->
+                    <div class="ap-zone reveal">
+                        <div class="ap-zone-label">Specialized Focus Areas</div>
+                        <div class="ap-focus-list">
+                            <div class="ap-focus-item">
+                                <span class="ap-focus-num">01</span>
+                                <div><span>Non-motorized transportation</span><small>Walking &amp; bicycling infrastructure</small></div>
+                            </div>
+                            <div class="ap-focus-item">
+                                <span class="ap-focus-num">02</span>
+                                <div><span>Transit-Oriented Development</span><small>TOD &amp; eTOD</small></div>
+                            </div>
+                            <div class="ap-focus-item">
+                                <span class="ap-focus-num">03</span>
+                                <div><span>Urban Mobility &amp; Accessibility</span><small>Inclusive urban solutions</small></div>
+                            </div>
+                            <div class="ap-focus-item">
+                                <span class="ap-focus-num">04</span>
+                                <div><span>Inclusive Transportation</span><small>Equity-centered planning</small></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone 2: Technical Skills -->
+                    <div class="ap-zone reveal reveal-delay-1">
+                        <div class="ap-zone-label">Technical Skills</div>
+                        <div class="skills-list">
+                            <div class="skill-line">
+                                <div class="skill-info"><span>GIS / ArcGIS</span><span>95%</span></div>
+                                <div class="bar"><div class="fill" style="width:95%"></div></div>
+                            </div>
+                            <div class="skill-line">
+                                <div class="skill-info"><span>Data Analysis (Excel)</span><span>90%</span></div>
+                                <div class="bar"><div class="fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill-line">
+                                <div class="skill-info"><span>Data Visualization</span><span>85%</span></div>
+                                <div class="bar"><div class="fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-line">
+                                <div class="skill-info"><span>Transport Modeling</span><span>82%</span></div>
+                                <div class="bar"><div class="fill" style="width:82%"></div></div>
+                            </div>
+                            <div class="skill-line">
+                                <div class="skill-info"><span>Microsoft Office Suite</span><span>90%</span></div>
+                                <div class="bar"><div class="fill" style="width:90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ——— EXPERT AREA ——— -->
+            <section class="expert-section" id="expertise">
+                <div class="expert-layout-stacked">
+                    
+                    <!-- Left Column: Content -->
+                    <div class="expert-content-col reveal">
+                        <div class="section-eyebrow">What I Do</div>
+                        <h2 class="section-title">My Expert Area</h2>
+                        <p class="expert-desc">
+                            As a transportation planner, I specialize in designing sustainable mobility solutions for urban communities. I believe that great planning starts with listening to people, understanding data, and building systems that serve everyone — including those who have been historically left out.
+                        </p>
+                        <div class="expertise-tags">
+                            <span class="expertise-tag active">Transportation Planning</span>
+                            <span class="expertise-tag">Urban Analytics</span>
+                            <span class="expertise-tag">Sustainable Mobility</span>
+                            <span class="expertise-tag">Policy Analysis</span>
+                            <span class="expertise-tag">Land Use</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual tools -->
+                    <div class="expert-visual-col reveal reveal-delay-2">
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>ArcGIS Analysis</span>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Data Analysis</span>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-city"></i>
+                                <span>Urban Design</span>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-bus"></i>
+                                <span>Transit Operations</span>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Sustainability</span>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-chart-area"></i>
+                                <span>Data Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ——— CORE SKILLS ——— -->
+            <section class="content-section" id="skills">
+                <div class="section-header">
+                    <div class="section-eyebrow reveal">Capabilities</div>
+                    <h2 class="section-title reveal reveal-delay-1">Core Skills & Expertise</h2>
+                </div>
+                <div class="skills-bento">
+                    <div class="skill-card reveal">
+                        <span class="skill-card-number">01</span>
+                        <div class="skill-card-icon"><i class="fas fa-road"></i></div>
+                        <h3>Transportation Planning & Policy</h3>
+                        <ul>
+                            <li>Policy analysis and evaluation</li>
+                            <li>Urban transportation systems</li>
+                            <li>Public transit planning</li>
+                            <li>Strategic planning</li>
+                            <li>Multimodal transportation</li>
+                            <li>Land use integration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card reveal reveal-delay-1">
+                        <span class="skill-card-number">02</span>
+                        <div class="skill-card-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h3>Data & Analytics</h3>
+                        <ul>
+                            <li>GIS / ArcGIS mapping</li>
+                            <li>Ridership performance analysis</li>
+                            <li>Air quality conformity reports</li>
+                            <li>Data visualization & dashboards</li>
+                            <li>Statistical modeling</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card reveal reveal-delay-2">
+                        <span class="skill-card-number">03</span>
+                        <div class="skill-card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Community & Stakeholder</h3>
+                        <ul>
+                            <li>Participatory planning sessions</li>
+                            <li>Stakeholder facilitation</li>
+                            <li>Equity-focused outreach</li>
+                            <li>Policy recommendation reports</li>
+                            <li>Regulatory compliance review</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ——— EXPERIENCE ——— -->
+            <section class="content-section" id="history">
+                <div class="section-header">
+                    <div class="section-eyebrow reveal">Track Record</div>
+                    <h2 class="section-title reveal reveal-delay-1">Professional Experience</h2>
+                </div>
+                <div class="timeline-layout">
+                    <div>
+                        <div class="timeline-col-title">Industry Roles</div>
+                        <div class="timeline">
+
+                            <div class="timeline-item reveal">
+                                <div class="timeline-line">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-track"></span>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Transit Authority of River City (TARC)</h4>
+                                        <span class="timeline-date">Feb 2025 – Present</span>
+                                    </div>
+                                    <p class="timeline-sub">Transportation Planner / Transit Planning & Data Analyst</p>
+                                    <ul class="timeline-ul">
+                                        <li>Analyze ridership and operational performance data to optimize transit routes.</li>
+                                        <li>Evaluate transportation impacts of federal and state legislative proposals.</li>
+                                        <li>Design and evaluate transit corridors and station locations for network expansion.</li>
+                                        <li>Develop air quality conformity determination reports ensuring federal standards.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal reveal-delay-1">
+                                <div class="timeline-line">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-track"></span>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Parkway Place, Louisville</h4>
+                                        <span class="timeline-date">Aug 2025 – Present</span>
+                                    </div>
+                                    <p class="timeline-sub">Neighborhood Planning & Policy Leadership</p>
+                                    <ul class="timeline-ul">
+                                        <li>Strategic input on multimodal safety, ADA accessibility, and traffic calming.</li>
+                                        <li>Coordinated transit-related discussions with TARC.</li>
+                                        <li>Reviewed zoning and development proposals for neighborhood stability.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="timeline-col-title">Academic Roles</div>
+                        <div class="timeline">
+
+                            <!-- UA Role 1 -->
+                            <div class="timeline-item reveal">
+                                <div class="timeline-line">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-track"></span>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>University of Arizona, Tucson, AZ</h4>
+                                        <span class="timeline-date">Aug 2023 – May 2025</span>
+                                    </div>
+                                    <p class="timeline-sub">Graduate Assistant – Transportation &amp; Land Use Planning</p>
+                                    <ul class="timeline-ul">
+                                        <li>Facilitated stakeholder engagement sessions for the Plan Tucson 2025 General Plan Update.</li>
+                                        <li>Supported interdisciplinary teams on land use–transportation integration.</li>
+                                        <li>Gathered community input to inform planning strategies and policy recommendations.</li>
+                                        <li>Contributed to equitable and multimodal transportation solutions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- UA Role 2 -->
+                            <div class="timeline-item reveal reveal-delay-1">
+                                <div class="timeline-line">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-track"></span>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>University of Arizona, Tucson, AZ</h4>
+                                        <span class="timeline-date">Aug 2022 – May 2024</span>
+                                    </div>
+                                    <p class="timeline-sub">Graduate Research Assistant – Climate Action Planning</p>
+                                    <ul class="timeline-ul">
+                                        <li>Evaluated climate action plans using performance metrics and policy frameworks.</li>
+                                        <li>Prepared technical reports, presentations, and policy briefs for stakeholders.</li>
+                                        <li>Monitored implementation progress and recommended sustainability improvements.</li>
+                                        <li>Communicated research to academic, professional, and community audiences.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- UA Role 3 -->
+                            <div class="timeline-item reveal reveal-delay-2">
+                                <div class="timeline-line">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-track"></span>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>University of Arizona, Tucson, AZ</h4>
+                                        <span class="timeline-date">Aug 2022 – May 2024</span>
+                                    </div>
+                                    <p class="timeline-sub">Graduate Teaching Assistant – Sustainable Cities</p>
+                                    <ul class="timeline-ul">
+                                        <li>Supported instruction in sustainable urban development, transportation, and environmental planning.</li>
+                                        <li>Led discussion sessions and assisted in curriculum development.</li>
+                                        <li>Facilitated student understanding of planning concepts and sustainability frameworks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ——— EDUCATION ——— -->
+            <section class="content-section" id="education">
+                <div class="section-header">
+                    <div class="section-eyebrow reveal">Academic Path</div>
+                    <h2 class="section-title reveal reveal-delay-1">Education</h2>
+                </div>
+                <div class="education-grid">
+                    <div class="edu-card reveal">
+                        <span class="edu-date-lg">24</span>
+                        <span class="edu-badge">2024</span>
+                        <h4>M.Sc. Urban Planning</h4>
+                        <p>University of Arizona, Tucson, AZ</p>
+                        <span class="edu-focus">Focus: Transportation &amp; Land Use</span>
+                    </div>
+                    <div class="edu-card reveal reveal-delay-1">
+                        <span class="edu-date-lg">22</span>
+                        <span class="edu-badge">2022</span>
+                        <h4>M.Sc. Water Resource Policy</h4>
+                        <p>East Central University, Oklahoma</p>
+                    </div>
+                    <div class="edu-card reveal reveal-delay-2">
+                        <span class="edu-date-lg">17</span>
+                        <span class="edu-badge">2017</span>
+                        <h4>B.Sc. Geography</h4>
+                        <p>Kenyatta University, Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ——— AWARDS & CERTIFICATIONS ——— -->
+            <section class="content-section" id="recognition">
+                <div class="section-header">
+                    <div class="section-eyebrow reveal">Achievements</div>
+                    <h2 class="section-title reveal reveal-delay-1">Awards & Certifications</h2>
+                </div>
+                <div class="recognition-layout">
+                    <div class="rec-box reveal">
+                        <div class="rec-box-header">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certifications</h3>
+                        </div>
+                        <ul class="rec-list">
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Ridership Forecasting with STOPS for Transit Project Planning — NTI (2026)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Public Involvement in Transportation Decision Making — NTI (2025)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Inclusive Urban Design: From Public Spaces to Public Transport — IUM, EU (2025)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Demand Responsive Transport (DRT): Understanding its role in modern mobility — IUM, EU (2024)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Sustainable Urban Mobility Plans (SUMPs): Integrated &amp; sustainable transport strategies — IUM, EU (2024)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>AI in Urban Mobility: Leveraging AI for smarter urban transport — IUM, EU (2024)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>The Urban Heat Island Effect: Strategies for mitigating excess heat — IUM, EU (2024)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Multimodal Transport: Promoting diverse transportation modes for resilient cities — IUM, EU (2024)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rec-box reveal reveal-delay-1">
+                        <div class="rec-box-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Key Awards</h3>
+                        </div>
+                        <ul class="rec-list">
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>National Planning Conference (APA) — 2024</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Planning Excellence — University of Arizona, CAPLA (2024)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Watkins Lecture: Global Crisis — Food and Water (2022)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Runner-up — Ivory Innovation Hack-A-House, Affordable Housing (2022)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Runner-up — The Big Pitch, Revenue Generating, Oklahoma (2021)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>13th Annual WaterSmart Innovations Conference (WSI) — Las Vegas (2021)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Oka' Institute Water Sustainability Conference (2021)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>High-Resolution Land Cover Inter-comparison Workshop — RCMRD (2016)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>ACORCE Annual Conference of Research and Exhibition — KICC (2016)</span>
+                            </li>
+                            <li class="rec-list-item">
+                                <span class="rec-dot"></span>
+                                <span>Mau-Mara Serengeti Mapathon via OpenStreetMap — Upande, Kenya (2016)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ——— CONTACT ——— -->
+            <section class="content-section contact-section" id="contact">
+                <div class="section-header">
+                    <div class="section-eyebrow reveal">Let's Work Together</div>
+                    <h2 class="section-title reveal reveal-delay-1">Get in Touch</h2>
+                </div>
+
+                <p class="contact-intro reveal">
+                    Whether you're looking for a transportation planning consultant, a collaborator on urban mobility projects, or simply want to connect — reach out directly below.
+                </p>
+
+                <div class="contact-cta-grid">
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/15027791529" target="_blank" rel="noopener" class="contact-cta-card reveal">
+                        <div class="contact-cta-icon" style="--cta-color: #25D366;">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-cta-body">
+                            <span class="contact-cta-label">WhatsApp</span>
+                            <span class="contact-cta-value">+1 (502) 779-1529</span>
+                            <span class="contact-cta-action">Chat on WhatsApp <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:dilanbrian@gmail.com" class="contact-cta-card reveal reveal-delay-1">
+                        <div class="contact-cta-icon" style="--cta-color: #d4a843;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-cta-body">
+                            <span class="contact-cta-label">Email</span>
+                            <span class="contact-cta-value">dilanbrian@gmail.com</span>
+                            <span class="contact-cta-action">Send an Email <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Phone Call -->
+                    <a href="tel:+15027791529" class="contact-cta-card reveal reveal-delay-2">
+                        <div class="contact-cta-icon" style="--cta-color: #7c83fd;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-cta-body">
+                            <span class="contact-cta-label">Phone Call</span>
+                            <span class="contact-cta-value">+1 (502) 779-1529</span>
+                            <span class="contact-cta-action">Call Now <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Location -->
+                    <div class="contact-cta-card contact-location reveal reveal-delay-3">
+                        <div class="contact-cta-icon" style="--cta-color: #a0a0b0;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-cta-body">
+                            <span class="contact-cta-label">Location</span>
+                            <span class="contact-cta-value">Louisville, KY</span>
+                            <span class="contact-cta-action">United States of America</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer-main">
+                <span>© 2025 <strong>Bahati Oonga</strong>. All Rights Reserved.</span>
+                <span>Transportation & Land Use Planner · Louisville, KY</span>
+            </footer>
+
+        </main>
+        
+        <!-- ======================== MINI NAV ======================== -->
+        <nav class="mini-nav" id="mini-nav">
+            <a href="#home" title="Home" class="active" id="nav-home"><i class="fas fa-house"></i></a>
+            <div class="mini-nav-separator"></div>
+            <a href="#about" title="About" id="nav-about"><i class="fas fa-user"></i></a>
+            <a href="#expertise" title="Expertise" id="nav-expertise"><i class="fas fa-star"></i></a>
+            <a href="#skills" title="Skills" id="nav-skills"><i class="fas fa-code"></i></a>
+            <a href="#history" title="Experience" id="nav-history"><i class="fas fa-briefcase"></i></a>
+            <a href="#education" title="Education" id="nav-education"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#recognition" title="Awards" id="nav-recognition"><i class="fas fa-award"></i></a>
+            <div class="mini-nav-separator"></div>
+            <a href="#contact" title="Contact" id="nav-contact"><i class="fas fa-paper-plane"></i></a>
+        </nav>
+
+    </div><!-- end .app-wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
