@@ -1950,23 +1950,33 @@ textarea { height: 130px; resize: none; }
     .hero-name { 
         font-size: 2.2rem !important; 
         line-height: 1.1 !important; 
-        margin: 12px 0 0 !important; 
+        margin: 12px auto 0 !important; 
         padding: 0 !important;
+        text-align: center !important;
     }
-    .hero-role { margin: 0 auto 28px !important; }
+    .hero-role { 
+        margin: 0 auto 32px !important; 
+        text-align: center !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
     .hero-cta { 
         display: flex !important;
         flex-direction: row !important; 
         justify-content: center !important; 
-        margin-top: 24px !important; 
-        gap: 12px !important; 
+        margin: 32px auto 0 !important; 
+        gap: 10px !important; 
+        width: 100% !important;
+        max-width: 440px !important;
     }
     .hero-cta .btn-primary, .hero-cta .btn-outline {
-        padding: 12px 18px !important;
-        font-size: 0.65rem !important;
-        flex: 1;
-        justify-content: center;
-        white-space: nowrap;
+        padding: 12px 10px !important;
+        font-size: 0.62rem !important;
+        flex: 1 !important;
+        width: auto !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        min-width: 0 !important;
     }
     .hero-image-card { height: 320px; width: 100% !important; margin: 0 !important; }
     .hero-badge { display: none !important; }
