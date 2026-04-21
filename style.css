@@ -1922,12 +1922,20 @@ textarea { height: 130px; resize: none; }
         overflow: visible !important;
     }
 
-    /* Hero section padding tweak */
-    .hero-inner { padding: 64px 32px; }
-    .hero-name { font-size: 2.5rem !important; line-height: 1.1 !important; margin-bottom: 24px !important; }
-    .hero-role { margin-bottom: 40px !important; line-height: 1.6 !important; }
-    .hero-cta { margin-top: 48px !important; gap: 20px !important; }
-    .hero-image-card { height: 320px; }
+    /* Hero section fix: Stack vertically and remove overlap */
+    .hero-inner { 
+        grid-template-columns: 1fr !important; 
+        text-align: center !important;
+        padding: 56px 24px !important;
+        gap: 40px !important;
+    }
+    .hero-text-block { padding-right: 0 !important; }
+    .hero-eyebrow { justify-content: center !important; }
+    .hero-name { font-size: 2.4rem !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
+    .hero-role { margin: 0 auto 36px !important; }
+    .hero-cta { justify-content: center !important; margin-top: 32px !important; gap: 16px !important; }
+    .hero-image-card { height: 320px; width: 100% !important; margin-top: 40px; }
+    .hero-badge { display: none !important; } /* Hidden to avoid overlap/clutter on mobile */
 
     /* Layout stacking */
     .expert-layout-stacked { grid-template-columns: 1fr; gap: 56px; }
