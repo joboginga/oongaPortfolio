@@ -1927,58 +1927,74 @@ textarea { height: 130px; resize: none; }
         overflow: visible !important;
     }
 
-    /* Hero section reorder: Role -> Image -> Name -> Info */
+    /* ULTIMATE MOBILE FIX: ROLE -> IMAGE -> NAME -> INFO */
     .hero-inner { 
-        grid-template-columns: 1fr !important; 
-        grid-template-areas: 
-            "eye"
-            "visual"
-            "name"
-            "info" !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         text-align: center !important;
-        padding: 48px 24px !important;
+        padding: 48px 20px !important;
         gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     .hero-eyebrow { 
+        width: 100% !important;
         justify-content: center !important; 
         font-size: 1.1rem !important; 
-        margin-bottom: 8px !important;
+        margin-bottom: 12px !important;
         padding: 0 !important;
+        text-align: center !important;
     }
-    .hero-eyebrow::before { width: 40px !important; }
+    .hero-eyebrow::before { display: none !important; }
 
+    .hero-image-card { 
+        width: 100% !important; 
+        max-width: 320px !important;
+        height: 300px !important;
+        margin: 0 auto !important;
+        order: 2 !important;
+    }
     .hero-name { 
+        width: 100% !important;
         font-size: 2.2rem !important; 
         line-height: 1.1 !important; 
-        margin: 12px auto 0 !important; 
-        padding: 0 !important;
+        margin: 20px auto 0 !important; 
         text-align: center !important;
+        order: 3 !important;
+    }
+    .hero-info-part { 
+        width: 100% !important;
+        margin: 16px auto 0 !important; 
+        text-align: center !important;
+        order: 4 !important;
     }
     .hero-role { 
-        margin: 0 auto 32px !important; 
-        text-align: center !important;
-        max-width: 100% !important;
         width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto 32px !important;
+        font-size: 1rem !important;
     }
+    .hero-role br { display: none !important; } /* Stop forcing breaks on mobile */
     .hero-cta { 
         display: flex !important;
         flex-direction: row !important; 
+        flex-wrap: nowrap !important;
         justify-content: center !important; 
-        margin: 32px auto 0 !important; 
         gap: 10px !important; 
         width: 100% !important;
-        max-width: 440px !important;
+        margin: 0 !important;
     }
-    .hero-cta .btn-primary, .hero-cta .btn-outline {
-        padding: 12px 10px !important;
+    .hero-cta a {
+        flex: 1 1 0% !important;
+        width: 50% !important;
+        padding: 14px 5px !important;
         font-size: 0.62rem !important;
-        flex: 1 !important;
-        width: auto !important;
         justify-content: center !important;
         white-space: nowrap !important;
-        min-width: 0 !important;
+        display: flex !important;
+        align-items: center !important;
     }
-    .hero-image-card { height: 320px; width: 100% !important; margin: 0 !important; }
     .hero-badge { display: none !important; }
 
     /* Layout stacking */
