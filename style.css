@@ -535,9 +535,10 @@ ul { list-style: none; }
 
 .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 1fr 400px;
     grid-template-areas: 
-        "header visual"
+        "eye visual"
+        "name visual"
         "info visual";
     gap: 0 60px;
     align-items: center;
@@ -546,7 +547,8 @@ ul { list-style: none; }
     z-index: 1;
 }
 
-.hero-header-part { grid-area: header; padding-right: 60px; }
+.hero-eyebrow { grid-area: eye; padding-right: 60px; }
+.hero-name { grid-area: name; padding-right: 60px; }
 .hero-info-part { grid-area: info; padding-right: 60px; }
 .hero-image-card { grid-area: visual; }
 
@@ -1925,24 +1927,48 @@ textarea { height: 130px; resize: none; }
         overflow: visible !important;
     }
 
-    /* Hero section reorder: Role -> Image -> Description */
+    /* Hero section reorder: Role -> Image -> Name -> Info */
     .hero-inner { 
         grid-template-columns: 1fr !important; 
         grid-template-areas: 
-            "header"
+            "eye"
             "visual"
+            "name"
             "info" !important;
         text-align: center !important;
-        padding: 56px 24px !important;
-        gap: 32px !important;
+        padding: 48px 24px !important;
+        gap: 24px !important;
     }
-    .hero-header-part { margin-bottom: 0; }
-    .hero-info-part { margin-top: 0; }
-    .hero-eyebrow { justify-content: center !important; margin-bottom: 16px !important; }
-    .hero-name { font-size: 2.3rem !important; line-height: 1.1 !important; margin-bottom: 0 !important; }
-    .hero-role { margin: 0 auto 36px !important; }
-    .hero-cta { justify-content: center !important; margin-top: 32px !important; gap: 16px !important; }
-    .hero-image-card { height: 320px; width: 100% !important; margin: 12px 0 24px !important; }
+    .hero-eyebrow { 
+        justify-content: center !important; 
+        font-size: 1.1rem !important; 
+        margin-bottom: 8px !important;
+        padding: 0 !important;
+    }
+    .hero-eyebrow::before { width: 40px !important; }
+
+    .hero-name { 
+        font-size: 2.2rem !important; 
+        line-height: 1.1 !important; 
+        margin: 12px 0 0 !important; 
+        padding: 0 !important;
+    }
+    .hero-role { margin: 0 auto 28px !important; }
+    .hero-cta { 
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: center !important; 
+        margin-top: 24px !important; 
+        gap: 12px !important; 
+    }
+    .hero-cta .btn-primary, .hero-cta .btn-outline {
+        padding: 12px 18px !important;
+        font-size: 0.65rem !important;
+        flex: 1;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .hero-image-card { height: 320px; width: 100% !important; margin: 0 !important; }
     .hero-badge { display: none !important; }
 
     /* Layout stacking */
