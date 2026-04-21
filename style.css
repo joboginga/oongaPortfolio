@@ -1932,68 +1932,63 @@ textarea { height: 130px; resize: none; }
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
-        padding: 48px 20px !important;
+        padding: 48px 24px !important;
         gap: 24px !important;
         width: 100% !important;
         max-width: 100% !important;
     }
-    .hero-eyebrow { 
+    .hero-eyebrow, .hero-image-card, .hero-name, .hero-info-part, .hero-role, .hero-cta {
+        grid-area: auto !important; /* Reset desktop grid */
+        margin-left: auto !important;
+        margin-right: auto !important;
         width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .hero-eyebrow { 
         justify-content: center !important; 
         font-size: 1.1rem !important; 
-        margin-bottom: 12px !important;
-        padding: 0 !important;
-        text-align: center !important;
+        margin-bottom: 8px !important;
     }
     .hero-eyebrow::before { display: none !important; }
 
     .hero-image-card { 
-        width: 100% !important; 
         max-width: 320px !important;
-        height: 300px !important;
-        margin: 0 auto !important;
+        height: 280px !important;
         order: 2 !important;
     }
     .hero-name { 
-        width: 100% !important;
         font-size: 2.2rem !important; 
         line-height: 1.1 !important; 
         margin: 20px auto 0 !important; 
-        text-align: center !important;
         order: 3 !important;
     }
     .hero-info-part { 
-        width: 100% !important;
         margin: 16px auto 0 !important; 
-        text-align: center !important;
         order: 4 !important;
     }
     .hero-role { 
-        width: 100% !important;
-        text-align: center !important;
         margin: 0 auto 32px !important;
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
     }
-    .hero-role br { display: none !important; } /* Stop forcing breaks on mobile */
+    .hero-role br { display: none !important; }
     .hero-cta { 
         display: flex !important;
         flex-direction: row !important; 
         flex-wrap: nowrap !important;
         justify-content: center !important; 
-        gap: 10px !important; 
-        width: 100% !important;
-        margin: 0 !important;
+        gap: 12px !important; 
+        margin: 0 auto !important;
     }
     .hero-cta a {
         flex: 1 1 0% !important;
-        width: 50% !important;
-        padding: 14px 5px !important;
-        font-size: 0.62rem !important;
+        padding: 14px 10px !important;
+        font-size: 0.65rem !important;
         justify-content: center !important;
-        white-space: nowrap !important;
         display: flex !important;
-        align-items: center !important;
     }
     .hero-badge { display: none !important; }
 
