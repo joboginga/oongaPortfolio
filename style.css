@@ -1827,9 +1827,9 @@ textarea { height: 130px; resize: none; }
    ============================================ */
 @media (max-width: 1280px) {
     .hero-inner { padding: 60px 40px 40px; }
-    .content-section { padding: 60px 40px; }
-    .expert-section { padding: 60px 40px; }
-    .footer-main { padding: 28px 40px; }
+    .content-section { padding: 64px 28px; }
+    .expert-section { padding: 64px 28px; }
+    .footer-main { padding: 32px 28px; }
     .hero-image-card { height: 400px; }
     .stats-row { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1923,40 +1923,52 @@ textarea { height: 130px; resize: none; }
     }
 
     /* Hero section padding tweak */
-    .hero-inner { padding: 48px 24px; }
-    .hero-name { font-size: 2.7rem !important; }
+    .hero-inner { padding: 64px 32px; }
+    .hero-name { font-size: 2.5rem !important; line-height: 1.1 !important; margin-bottom: 24px !important; }
+    .hero-role { margin-bottom: 40px !important; line-height: 1.6 !important; }
+    .hero-cta { margin-top: 48px !important; gap: 20px !important; }
     .hero-image-card { height: 320px; }
 
     /* Layout stacking */
-    .expert-layout-stacked { grid-template-columns: 1fr; gap: 40px; }
-    .about-prof-section { padding-top: 48px; }
-    .ap-top-grid { grid-template-columns: 1fr; }
+    .expert-layout-stacked { grid-template-columns: 1fr; gap: 56px; }
+    .expert-desc { font-size: 1.05rem !important; line-height: 1.6 !important; margin-bottom: 48px !important; }
+    .tool-card { padding: 48px 24px !important; }
+    .about-prof-section { padding-top: 56px; }
+    .ap-top-grid { grid-template-columns: 1fr; gap: 40px; }
     .ap-lang-row { 
         justify-content: center !important; 
-        gap: 52px !important; 
-        margin-top: 24px !important;
+        gap: 48px !important; 
+        margin-top: 32px !important;
     }
-    .ap-lang-row .progress-circle { width: 110px !important; height: 110px !important; }
-    .ap-lang-row .progress-circle svg { width: 110px !important; height: 110px !important; }
-    .ap-lang-row .progress-circle .percent { font-size: 1.1rem !important; }
+    .ap-lang-row .progress-circle { width: 100px !important; height: 100px !important; }
+    .ap-lang-row .progress-circle svg { width: 100px !important; height: 100px !important; }
 
-    .ap-panel { grid-template-columns: 1fr; }
+    .ap-panel { grid-template-columns: 1fr; gap: 32px; }
     
-    .timeline-layout { grid-template-columns: 1fr; }
-    .timeline-item { padding-left: 28px; }
-    .timeline-dot { left: -5.5px; }
+    .timeline-layout { grid-template-columns: 1fr; gap: 64px; }
+    .timeline-col-title { margin-bottom: 28px !important; font-size: 0.75rem !important; }
+    .timeline-item { 
+        grid-template-columns: 32px 1fr !important; 
+        gap: 16px !important; 
+        margin-bottom: 56px !important; 
+    }
+    .timeline-content { padding: 32px 28px !important; }
+    .timeline-dot { width: 12px; height: 12px; margin-top: 6px; }
+    .timeline-header { flex-direction: column !important; gap: 10px !important; margin-bottom: 20px !important; }
+    .timeline-date { align-self: flex-start; }
+    .timeline-sub { margin-bottom: 24px !important; font-size: 0.82rem !important; }
 
-    .skills-bento { grid-template-columns: 1fr; gap: 20px; }
-    .education-grid { grid-template-columns: 1fr; gap: 32px; }
-    .recognition-layout { grid-template-columns: 1fr; gap: 40px; }
-    .contact-cta-grid { grid-template-columns: 1fr; gap: 16px; }
-    .footer-main { padding: 40px 24px; text-align: center; }
+    .skills-bento { grid-template-columns: 1fr; gap: 28px; }
+    .education-grid { grid-template-columns: 1fr; gap: 40px; }
+    .recognition-layout { grid-template-columns: 1fr; gap: 48px; }
+    .contact-cta-grid { grid-template-columns: 1fr; gap: 20px; }
+    .footer-main { padding: 48px 32px; }
 }
 
 @media (max-width: 600px) {
+    .hero-inner { padding: 56px 24px; }
     .hero-name { font-size: 2.2rem !important; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .stat-cell { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .stat-cell:nth-child(even) { border-right: none; }
-    .stat-cell:nth-child(n+3) { border-bottom: none; }
+    .content-section { padding: 64px 24px; }
+    .timeline-item { grid-template-columns: 28px 1fr !important; gap: 12px !important; }
+    .timeline-content { padding: 24px 20px !important; }
 }
