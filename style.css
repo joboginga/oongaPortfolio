@@ -536,16 +536,19 @@ ul { list-style: none; }
 .hero-inner {
     display: grid;
     grid-template-columns: 1fr 380px;
-    gap: 0;
+    grid-template-areas: 
+        "header visual"
+        "info visual";
+    gap: 0 60px;
     align-items: center;
     padding: 80px 60px 40px;
     position: relative;
     z-index: 1;
 }
 
-.hero-text-block {
-    padding-right: 60px;
-}
+.hero-header-part { grid-area: header; padding-right: 60px; }
+.hero-info-part { grid-area: info; padding-right: 60px; }
+.hero-image-card { grid-area: visual; }
 
 .hero-eyebrow {
     display: inline-flex;
@@ -1922,20 +1925,25 @@ textarea { height: 130px; resize: none; }
         overflow: visible !important;
     }
 
-    /* Hero section fix: Stack vertically and remove overlap */
+    /* Hero section reorder: Role -> Image -> Description */
     .hero-inner { 
         grid-template-columns: 1fr !important; 
+        grid-template-areas: 
+            "header"
+            "visual"
+            "info" !important;
         text-align: center !important;
         padding: 56px 24px !important;
-        gap: 40px !important;
+        gap: 32px !important;
     }
-    .hero-text-block { padding-right: 0 !important; }
-    .hero-eyebrow { justify-content: center !important; }
-    .hero-name { font-size: 2.4rem !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
+    .hero-header-part { margin-bottom: 0; }
+    .hero-info-part { margin-top: 0; }
+    .hero-eyebrow { justify-content: center !important; margin-bottom: 16px !important; }
+    .hero-name { font-size: 2.3rem !important; line-height: 1.1 !important; margin-bottom: 0 !important; }
     .hero-role { margin: 0 auto 36px !important; }
     .hero-cta { justify-content: center !important; margin-top: 32px !important; gap: 16px !important; }
-    .hero-image-card { height: 320px; width: 100% !important; margin-top: 40px; }
-    .hero-badge { display: none !important; } /* Hidden to avoid overlap/clutter on mobile */
+    .hero-image-card { height: 320px; width: 100% !important; margin: 12px 0 24px !important; }
+    .hero-badge { display: none !important; }
 
     /* Layout stacking */
     .expert-layout-stacked { grid-template-columns: 1fr; gap: 56px; }
